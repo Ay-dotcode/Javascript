@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My website</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Welcome</h1>
     <label for="myText">Username: </label>
-    <input type="text" id="myText">
+    <input type="text" id="myText" required>
+    <br>
+    <input type="checkbox" id="myCheckbox">
+    <label for="myCheckbox">
+        I agree to the <a href="" onclick="commingSoon()">terms & conditions</a>.
+    </label>
+    <hr>
     <button id="mySubmit">Submit</button>
 
-    <p id="myP"></p>
+    <p id="result"></p>
 
     <script src="index.js"></script>
 </body>
+
 </html>

@@ -1,10 +1,25 @@
-let username;
-document.getElementById("mySubmit").onclick = function () {
-    username = document.getElementById("myText").value;
-    document.getElementById("myP").textContent = `Your username is ${username}`;
+// defining variables
+const myCheckbox = document.getElementById("myCheckbox");
+const mySubmit = document.getElementById("mySubmit");
+const myText = document.getElementById("myText");
+const result = document.getElementById("result");
+
+function commingSoon() {
+    window.alert("Comming soon")
 }
 
-
+let username;
+mySubmit.onclick = function () {
+    if (myCheckbox.checked) {
+        username = myText.value;
+        if (username == "")
+            result.textContent = "Pls enter your username"
+        else
+            result.textContent = `Your username is ${username}`;
+    } else {
+        result.textContent = `Pls agree to the terms and conditions`;
+    }
+}
 
 
 // const PI = 3.14;

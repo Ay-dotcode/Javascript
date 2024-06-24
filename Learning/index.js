@@ -21,6 +21,14 @@ mySubmit.onclick = function () {
     }
 }
 
+// Can sum any number of arguments
+function add(...numbers) {
+    let ans = 0;
+    for (let num of numbers)
+        ans += num
+    return ans;
+}
+
 
 // const PI = 3.14;
 // console.log(`The value ${PI} is stored inside the variable PI`);

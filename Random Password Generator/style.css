@@ -18,6 +18,17 @@
     margin-bottom: 30px;
 }
 
+#options input[type="checkbox"] {
+    accent-color: hsl(240, 100%, 60%);
+}
+
+#options input {
+    color: hsl(240, 100%, 60%);
+    text-align: center;
+    width: 3em;
+    font-weight: bold;
+}
+
 #generateBtn {
     margin: auto;
     padding: 7px;

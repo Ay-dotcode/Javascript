@@ -4,12 +4,12 @@ const mySubmit = document.getElementById("mySubmit");
 const myText = document.getElementById("myText");
 const result = document.getElementById("result");
 
+const timerP = document.getElementById("timerP");
+
+
 function commingSoon() {
     window.alert("Comming soon");
 }
-
-//! Classes and objects
-
 
 let username;
 mySubmit.onclick = function () {
@@ -31,6 +31,18 @@ function add(...numbers) {
         ans += num
     return ans;
 }
+
+function startTimer() {
+    setTimeout(() => timerP.textContent = "Timer: 1s", 1000);
+    setTimeout(() => timerP.textContent = "Timer: 2s", 2000);
+    setTimeout(() => timerP.textContent = "Timer: 3s", 3000);
+    setTimeout(() => timerP.textContent = "Timer: 4s", 4000);
+    setTimeout(() => timerP.textContent = "Timer: 5s", 5000);
+    setTimeout(() => timerP.textContent = `Hello ${username}`, 6000);
+}
+
+
+
 
 // const PI = 3.14;
 // console.log(`The value ${PI} is stored inside the variable PI`);

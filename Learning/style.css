@@ -2,3 +2,30 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: hsl(0, 0%, 90%);
 }
+
+#timeoutBtn {
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background-color: hsl(240, 100%, 60%);
+    box-shadow: 1px 1px 5px hsl(0, 0%, 30%);
+}
+
+#timeoutBtn:hover {
+    background-color: hsl(240, 100%, 65%);
+    box-shadow: 2px 2px 5px hsl(0, 0%, 30%);
+}
+
+#timeoutBtn:active {
+    background-color: hsl(240, 100%, 62%);
+    box-shadow: 2px 2px 5px hsl(0, 0%, 0%);
+}
+
+#timerP {
+    text-align: center;
+}

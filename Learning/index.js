@@ -5,8 +5,11 @@ const myText = document.getElementById("myText");
 const result = document.getElementById("result");
 
 function commingSoon() {
-    window.alert("Comming soon")
+    window.alert("Comming soon");
 }
+
+//! Classes and objects
+
 
 let username;
 mySubmit.onclick = function () {
@@ -24,11 +27,10 @@ mySubmit.onclick = function () {
 // Can sum any number of arguments
 function add(...numbers) {
     let ans = 0;
-    for (let num of numbers)
+    for (const num of numbers)
         ans += num
     return ans;
 }
-
 
 // const PI = 3.14;
 // console.log(`The value ${PI} is stored inside the variable PI`);

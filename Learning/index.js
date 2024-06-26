@@ -11,11 +11,11 @@ function commingSoon() {
     window.alert("Comming soon");
 }
 
-let username;
+let username = "";
 mySubmit.onclick = function () {
     if (myCheckbox.checked) {
         username = myText.value;
-        if (username == "")
+        if (username === "")
             result.textContent = "Pls enter your username"
         else
             result.textContent = `Your username is ${username}`;
@@ -33,11 +33,11 @@ function add(...numbers) {
 }
 
 function startTimer() {
-    setTimeout(() => timerP.textContent = "Timer: 1s", 1000);
-    setTimeout(() => timerP.textContent = "Timer: 2s", 2000);
+    setTimeout(() => timerP.textContent = "Timer: 5s", 1000);
+    setTimeout(() => timerP.textContent = "Timer: 4s", 2000);
     setTimeout(() => timerP.textContent = "Timer: 3s", 3000);
-    setTimeout(() => timerP.textContent = "Timer: 4s", 4000);
-    setTimeout(() => timerP.textContent = "Timer: 5s", 5000);
+    setTimeout(() => timerP.textContent = "Timer: 2s", 4000);
+    setTimeout(() => timerP.textContent = "Timer: 1s", 5000);
     setTimeout(() => timerP.textContent = `Hello ${username}`, 6000);
 }
 

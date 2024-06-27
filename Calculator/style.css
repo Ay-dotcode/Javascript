@@ -30,10 +30,6 @@ body {
     color: white;
 }
 
-#display:focus {
-    outline: none;
-}
-
 #keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -87,7 +83,6 @@ button:active {
     background-color: hsl(0, 0%, 0%);
 }
 
-
 #button {
     background-color: hsl(0, 0%, 17%);
 }
@@ -101,15 +96,15 @@ button:active {
 }
 
 #special {
-    background-color: hsl(120, 100%, 40%)
+    background-color: hsl(120, 100%, 40%);
 }
 
 #special:hover {
-    background-color: hsl(120, 100%, 50%)
+    background-color: hsl(120, 100%, 50%);
 }
 
 #special:active {
-    background-color: hsl(120, 100%, 30%)
+    background-color: hsl(120, 100%, 30%);
 }
 
 #equal {

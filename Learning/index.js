@@ -41,8 +41,41 @@ function startTimer() {
     setTimeout(() => timerP.textContent = `Hello ${username}`, 6000);
 }
 
+//Image slider
+const slides = document.querySelectorAll(".slides img");
+let slideIndex = 0;
+let intervalID = null;
 
+document.addEventListener("DOMContentLoaded", initializeSlider);
 
+function initializeSlider() {
+    if (slides.length) {
+        slides[slideIndex].classList.add("displaySlide")
+        intervalID = setInterval(nextSlide, 5000);
+    }
+}
+function showSlide(index) {
+    if (index >= slides.length) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = slides.length - 1;
+    }
+    slides.forEach(slide => slide.classList.remove("displaySlide"));
+    slides[slideIndex].classList.add("displaySlide");
+}
+
+function prevSlide() {
+    slideIndex--;
+    showSlide(slideIndex);
+    stopSlide();
+}
+function nextSlide() {
+    slideIndex++;
+    showSlide(slideIndex);
+}
+function stopSlide() {
+    clearInterval(intervalID);
+}
 
 // const PI = 3.14;
 // console.log(`The value ${PI} is stored inside the variable PI`);

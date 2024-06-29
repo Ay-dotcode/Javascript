@@ -11,27 +11,45 @@
 
 <body>
     <h1>Welcome</h1>
-    <label for="myText">Username: </label>
-    <input type="text" id="myText" required>
-    <br>
-    <input type="checkbox" id="myCheckbox">
-    <label for="myCheckbox">
-        I agree to the <a href="" onclick="commingSoon()">terms & conditions</a>.
-    </label>
-    <hr>
-    <button id="mySubmit">Submit</button>
-
-    <p id="result"></p>
-    <hr>
-    <hr>
-    <br>
-
-    <button id="timeoutBtn" , onclick="startTimer()">Start timer</button>
-    <p id="timerP"></p>
+    <section>
+        <label for="myText">Username: </label>
+        <input type="text" id="myText" required>
+        <br>
+        <input type="checkbox" id="myCheckbox">
+        <label for="myCheckbox">
+            I agree to the <a href="" onclick="commingSoon()">terms & conditions</a>.
+        </label>
+        <hr>
+        <button id="mySubmit">Submit</button>
+        <p id="result"></p>
+    </section>
     <hr>
     <hr>
     <br>
-
+    <section>
+        <button id="timeoutBtn" , onclick="startTimer()">Start timer</button>
+        <p id="timerP"></p>
+    </section>
+    <hr>
+    <hr>
+    <br>
+    <section>
+        <div class="slider">
+            <div class="slides">
+                <img src="images/car 1.jpg" alt="Image 1">
+                <img src="images/car 2.jpg" alt="Image 2">
+                <img src="images/car 3.jpg" alt="Image 3">
+                <img src="images/car 4.jpg" alt="Image 4">
+                <img src="images/car 5.jpg" alt="Image 5">
+                <img src="images/car 6.jpg" alt="Image 6">
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094</button>
+            <button class="next" onclick="nextSlide()">&#10095</button>
+        </div>
+    </section>
+    <hr>
+    <hr>
+    <br>
 
 
 </body>

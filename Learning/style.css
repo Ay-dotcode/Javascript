@@ -29,3 +29,60 @@ body {
 #timerP {
     text-align: center;
 }
+
+.slider {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider img {
+    width: 100%;
+    display: none;
+}
+
+img.displaySlide {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    animation-name: fade;
+    animation-duration: 1s;
+    background-color: black;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.slider button:hover {
+    background-color: hsla(0, 0%, 0%, 0.7);
+}
+
+.slider button.prev {
+    left: 0;
+}
+
+.slider button.next {
+    right: 0;
+}
+
+@keyframes fade {
+    from {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -27,4 +27,8 @@ function updateStorage() {
 function showNote() {
     notesContainer.innerHTML = localStorage.getItem("notes");
 }
+function resetNotes() {
+    localStorage.removeItem("notes");
+    notesContainer.innerHTML = "";
+}
 showNote();

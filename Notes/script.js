@@ -7,7 +7,6 @@ function createNote() {
     let inputBox = document.createElement("p");
     let img = document.createElement("img");
     inputBox.className = "input-box";
-    // inputBox
     inputBox.setAttribute("contenteditable", "true");
     img.src = "Images/delete.png";
     img.alt = "delete";
@@ -41,5 +40,4 @@ function resetVisible() {
     else
         resetBtn.style.display = "block";
 }
-
 showNote();

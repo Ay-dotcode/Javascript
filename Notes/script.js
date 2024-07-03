@@ -7,34 +7,24 @@ function createNote() {
     let img = document.createElement("img");
     inputBox.className = "input-box";
     inputBox.setAttribute("contenteditable", "true");
-    // inputBox.onkeyup = function () {
-    //     updateStorage();
-    // }
+    inputBox.setAttribute("spellcheck", "false");
     img.src = "Images/delete.png";
     img.alt = "delete";
-    img.onclick = deleteNote;
     notesContainer.appendChild(inputBox).appendChild(img);
+    inputBox.onkeyup = function () {
+        updateStorage();
+    }
 }
-function deleteNote() {
-    this.parentElement.remove();
-    updateStorage();
-}
+notesContainer.addEventListener("click", function (e) {
+    if (e.target.tagName == "IMG") {
+        e.target.parentElement.remove();
+        updateStorage();
+    }
+});
 function updateStorage() {
     localStorage.setItem("notes", notesContainer.innerHTML);
 }
 function showNote() {
     notesContainer.innerHTML = localStorage.getItem("notes");
-    console.log(localStorage.getItem("notes"));
 }
-// notesContainer.addEventListener("click", function (e) {
-//     if (e.target.tagName === "p") {
-//         notes = document.querySelectorAll(".input-box");
-//         notes.forEach(nt => {
-//             nt.onkeyup = function () {
-//                 updateStorage();
-//             }
-//         })
-//     }
-// })
-
 showNote();

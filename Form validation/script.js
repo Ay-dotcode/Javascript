@@ -61,3 +61,13 @@ function validateMessage() {
     messageError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`;
     return true;
 }
+function submitForm() {
+    if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage) {
+        submitError.style.display = "block";
+        submitError.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> Please fix the error to submit`
+        setTimeout(() => {
+            submitError.style.display = "none";
+        }, 3000);
+        return false;
+    }
+}

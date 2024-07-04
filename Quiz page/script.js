@@ -66,7 +66,7 @@ function showQuestion() {
     })
 }
 function resetState() {
-    nextButton.style.display = "none";
+    nextButton.style.visibility = "hidden";
     while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
@@ -79,5 +79,17 @@ function selectAnswer(e) {
         score++;
     } else
         selectedBtn.classList.add("incorrect");
+    Array.from(answerButtons.children).forEach(button => {
+        if (button.dataset.correct === "true")
+            button.classList.add("correct");
+        button.disabled = true;
+    });
+    nextButton.style.visibility = "visible";
+}
+function showScore() {
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "Play Again";
+    nextButton.style.visibility = "visible";
 }
 startQuiz();

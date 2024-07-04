@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link rel="icon" href="images/icon.jpg">
+    <script src="https://kit.fontawesome.com/cfa79ec36a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
             <img id="paperPlane" src="images/paper plane.png" alt="Picture of a paper plane">
             <div class="inputGroup">
                 <label for="name">Full Name: </label>
-                <input type="text" placeholder="Enter your name" id="name">
+                <input type="text" placeholder="Enter your name" id="name" onkeydown="validateName()">
                 <span id="nameError"></span>
             </div>
             <div class="inputGroup">

@@ -108,3 +108,7 @@ body {
 #submitError {
     color: red;
 }
+
+.inputGroup span i {
+    color: seagreen;
+}

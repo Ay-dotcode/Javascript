@@ -20,11 +20,10 @@ body {
 
 .container {
     width: 50%;
-    max-width: 400px;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: white;
     color: black;
     padding: 40px;
@@ -96,4 +95,16 @@ body {
 
 #submitBtn:active {
     background: linear-gradient(135deg, hsl(0, 0%, 50%), hsl(0, 0%, 0%));
+}
+
+.inputGroup span {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+    font-size: 14px;
+    color: red;
+}
+
+#submitError {
+    color: red;
 }

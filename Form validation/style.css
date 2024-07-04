@@ -11,4 +11,85 @@ body {
     background-attachment: fixed;
     width: 100%;
     height: 100vh;
+    box-sizing: border-box;
+    displaY: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    width: 50%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+#paperPlane {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    width: 25px;
+    background-color: white;
+    color: black;
+}
+
+.inputGroup {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.inputGroup label {
+    flex-basis: 30%;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+    flex-basis: 70%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 16px;
+}
+
+::placeholder {
+    font-size: 14px;
+}
+
+#submitBtn {
+    background: linear-gradient(135deg, hsl(0, 0%, 20%), hsl(0, 0%, 70%));
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px 30px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+    font-size: 16px;
+}
+
+#submitBtn:hover {
+    background: linear-gradient(135deg, hsl(0, 0%, 70%), hsl(0, 0%, 20%));
+}
+
+#submitBtn:active {
+    background: linear-gradient(135deg, hsl(0, 0%, 50%), hsl(0, 0%, 0%));
 }

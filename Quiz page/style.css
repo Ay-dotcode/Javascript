@@ -26,14 +26,14 @@ h1 {
     font-size: 35px;
     color: hsl(217, 100%, 20%);
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     margin-top: 0;
     border-bottom: 1px solid hsl(217, 100%, 20%);
 }
 
 .quiz h2 {
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     color: black
 }
 
@@ -80,4 +80,12 @@ h1 {
 #nextBtn:active {
     background-color: hsl(217, 100%, 10%);
     color: white;
+}
+
+.correct {
+    background-color: hsl(100, 100%, 60%);
+}
+
+.incorrect {
+    background-color: tomato;
 }

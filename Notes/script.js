@@ -14,13 +14,13 @@ function createNote() {
     inputBox.onkeyup = function () {
         updateStorage();
     }
-    resetVisible();
+    resetBtnVisible();
 }
 notesContainer.addEventListener("click", function (e) {
     if (e.target.tagName == "IMG") {
         e.target.parentElement.remove();
         updateStorage();
-        resetVisible();
+        resetBtnVisible();
     }
 });
 function updateStorage() {
@@ -32,12 +32,18 @@ function showNote() {
 function resetNotes() {
     localStorage.removeItem("notes");
     notesContainer.innerHTML = "";
-    resetVisible();
+    resetBtnVisible();
 }
-function resetVisible() {
+function resetBtnVisible() {
     if (notesContainer.innerHTML === "")
         resetBtn.style.display = "none";
     else
         resetBtn.style.display = "block";
 }
+document.addEventListener("keydown", event => {
+    if (event.key === "Enter") {
+        document.execCommand("insertLineBreak");
+        event.preventDefault();
+    }
+})
 showNote();

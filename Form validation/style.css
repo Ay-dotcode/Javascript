@@ -53,12 +53,12 @@ body {
 }
 
 .inputGroup label {
-    flex-basis: 30%;
+    flex-basis: 22%;
 }
 
 .inputGroup input,
 .inputGroup textarea {
-    flex-basis: 70%;
+    flex-basis: 78%;
     background: transparent;
     border: 0;
     outline: 0;

@@ -32,7 +32,8 @@
             </div>
             <div class="inputGroup">
                 <label for="message">Your message:</label>
-                <textarea rows="5" name="message" id="message" placeholder="Enter your message here"></textarea>
+                <textarea rows="5" name="message" id="message" onkeyup="validateMessage()"
+                    placeholder="Enter your message here"></textarea>
                 <span id="messageError"></span>
             </div>
             <button type="submit" id="submitBtn">Submit</button>

@@ -36,3 +36,17 @@ function validatePhone() {
     return true;
 
 }
+function validateEmail() {
+    var email = document.getElementById("email").value;
+    if (email.length == 0) {
+        emailError.innerHTML = "Email no is required";
+        return false;
+    }
+    if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+        emailError.innerHTML = "Invalid email";
+        return false;
+    }
+    emailError.innerHTML = `<i class="fa-solid fa-circle-check"></i>`;
+    return true;
+
+}

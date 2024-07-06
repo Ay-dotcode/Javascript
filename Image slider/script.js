@@ -1,18 +1,19 @@
-let scrollContainer = document.querySelector("#gallery");
 let nextBtn = document.getElementById("nextBtn");
 let prevBtn = document.getElementById("prevBtn");
 let gallery = document.getElementById("gallery");
 
 
-scrollContainer.addEventListener("wheel", (evt) => {
+gallery.addEventListener("wheel", (evt) => {
     evt.preventDefault();
-    scrollContainer.scrollLeft += evt.deltaY;
+    gallery.scrollLeft += evt.deltaY;
 });
 
 nextBtn.addEventListener("click", () => {
-    scrollContainer.scrollLeft += gallery.offsetWidth + 20;
+    gallery.style.scrollBehavior = "smooth";
+    gallery.scrollLeft += gallery.offsetWidth + 20;
 });
 
 prevBtn.addEventListener("click", () => {
-    scrollContainer.scrollLeft -= gallery.offsetWidth + 20;
+    gallery.style.scrollBehavior = "smooth";
+    gallery.scrollLeft -= gallery.offsetWidth + 20;
 });

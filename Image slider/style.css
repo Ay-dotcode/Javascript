@@ -1,7 +1,7 @@
 body {
     border: 0;
     padding: 0;
-    background-color: gray;
+    background-color: hsl(0, 0%, 25%);
     font-family: sans-serif;
 }
 
@@ -43,6 +43,17 @@ body {
     font-size: 40px;
     cursor: pointer;
     margin: 5px;
+    transition: color 0.5s;
+}
+
+#nextBtn:hover,
+#prevBtn:hover {
+    color: hsl(240, 100%, 60%);
+}
+
+#nextBtn:active,
+#prevBtn:active {
+    color: hsl(240, 100%, 50%);
 }
 
 .img:hover {

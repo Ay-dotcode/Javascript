@@ -6,6 +6,7 @@ let gallery = document.getElementById("gallery");
 gallery.addEventListener("wheel", (evt) => {
     evt.preventDefault();
     gallery.scrollLeft += evt.deltaY;
+    gallery.style.scrollBehavior = "auto";
 });
 
 nextBtn.addEventListener("click", () => {

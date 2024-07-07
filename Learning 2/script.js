@@ -39,6 +39,7 @@
 // }
 // let person1 = new Person("Emma", 20);
 // let person2 = new Student("Ay", 18, 3.99);
+
 // console.log(person1);
 // console.log(person2);
 // console.log(person1.greet());
